@@ -1,13 +1,498 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naš Restoran & Concept Bar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="root"></div>
+   <header class="site-header">
+    <div class="container header-inner">
+
+      <a class="brand" href="#home" aria-label="Naš restoran — početna">
+        <span class="brand-mark">N.</span>
+        <span class="brand-name">
+          <strong>Naš restoran</strong>
+          <span>Concept Bar</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Glavna navigacija">
+        <a href="#home">Početna</a>
+        <a href="#menu">Meni</a>
+        <a href="#about">O nama</a>
+        <a href="#reviews">Utisci</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+
+      
+    <a class="cart-link" href="cart.html" aria-label="Korpa, 0 proizvoda">
+          <svg
+            class="cart-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <circle cx="9" cy="21" r="1" />
+            <circle cx="20" cy="21" r="1" />
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+          </svg>
+
+          <span class="cart-count">0</span>
+     </a>
+
+      <a class="button header-cta" href="#contact">
+        Pronađi nas <span class="arrow">↗</span>
+      </a>
+
+      <!-- CSS-only mobile navigation -->
+      <details class="mobile-menu">
+        <summary aria-label="Otvori navigaciju">
+          <span class="menu-lines"></span>
+        </summary>
+        <nav class="mobile-nav" aria-label="Mobilna navigacija">
+          <a href="#home">Početna</a>
+          <a href="#menu">Meni</a>
+          <a href="#about">O nama</a>
+          <a href="#reviews">Utisci</a>
+          <a href="#contact">Kontakt</a>
+        </nav>
+      </details>
+
+    </div>
+  </header>
+
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+
+        <div class="hero-content">
+          <div class="eyebrow">Dobro došli u naš kutak</div>
+
+          <h1>
+            Dobar ukus.<br />
+            <em>Pravo</em> društvo.
+          </h1>
+
+          <p class="hero-description">
+            Mesto za opušten ručak, dobre zalogaje i razgovore
+            koji se ne završavaju na brzinu. Svratite na
+            nešto ukusno i osećajte se kao kod kuće.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button" href="#menu">
+              Istraži meni <span class="arrow">↗</span>
+            </a>
+            <a class="button button-outline" href="#about">
+              Naša priča
+            </a>
+          </div>
+
+          <div class="hero-note">
+            Veternik, Novi Sad · Naš restoran & Concept Bar
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-photo">
+            <!-- Replace with a real photo of the restaurant -->
+            <img
+              src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=85"
+              alt="Prijatan ambijent restorana sa postavljenim stolovima"
+            />
+          </div>
+
+          <div class="hero-inset">
+            <img
+              src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=650&q=85"
+              alt="Sveže pripremljena hrana na stolu"
+            />
+          </div>
+
+          <div class="hero-stamp">
+            <span>Uživaj<br />u svakom<br />zalogaju</span>
+          </div>
+
+          <div class="hero-caption">Dobra hrana · Dobra atmosfera</div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- SHORT INTRO -->
+    <section class="intro-strip" aria-label="O restoranu">
+      <div class="container intro-inner">
+
+        <div class="intro-item">
+          <span class="intro-icon">✳</span>
+          <div>
+            <strong>Ukusna hrana</strong>
+            <span>Za svaki deo dana</span>
+          </div>
+        </div>
+
+        <div class="intro-item">
+          <span class="intro-icon">⌂</span>
+          <div>
+            <strong>Opušten ambijent</strong>
+            <span>Bez žurbe i stresa</span>
+          </div>
+        </div>
+
+        <div class="intro-item">
+          <span class="intro-icon">♡</span>
+          <div>
+            <strong>Ljubazna usluga</strong>
+            <span>Dobrodošli ste</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- MENU PREVIEW -->
+    <section class="menu-section" id="menu">
+      <div class="container">
+
+        <div class="menu-header">
+          <div>
+            <div class="eyebrow">Nešto za svačiji ukus</div>
+            <h2 class="section-heading">Mali izbor,<br />veliko uživanje.</h2>
+            <p class="section-copy">
+              Od svakodnevnog ručka do zalogaja uz druženje —
+              pogledajte nekoliko predloga iz naše kuhinje.
+            </p>
+          </div>
+
+          <a class="button button-outline" href="#contact">
+            Pogledaj meni <span class="arrow">↗</span>
+          </a>
+        </div>
+
+        <div class="menu-grid">
+
+          <article class="menu-card">
+            <div class="menu-image">
+              <img
+                src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85"
+                alt="Grilovano meso servirano uz prilog"
+                loading="lazy"
+              />
+              <span class="menu-tag">Sa roštilja</span>
+            </div>
+            <div class="menu-info">
+              <h3>Roštilj</h3>
+              <span>Za ljubitelje mesa</span>
+            </div>
+            <p class="menu-description">
+              Sočni zalogaji sa roštilja, pripremljeni za
+              opušten ručak i dobro društvo.
+            </p>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-image">
+              <img
+                src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=900&q=85"
+                alt="Hrskavi pomfrit poslužen kao prilog"
+                loading="lazy"
+              />
+              <span class="menu-tag">Omiljeni prilog</span>
+            </div>
+            <div class="menu-info">
+              <h3>Hrskavi zalogaji</h3>
+              <span>Za deljenje</span>
+            </div>
+            <p class="menu-description">
+              Nešto jednostavno i poznato, idealno uz
+              glavno jelo ili druženje za stolom.
+            </p>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-image">
+              <img
+                src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=85"
+                alt="Raznovrsna sveža hrana pripremljena za ručak"
+                loading="lazy"
+              />
+              <span class="menu-tag">Za svaki dan</span>
+            </div>
+            <div class="menu-info">
+              <h3>Dnevni ručak</h3>
+              <span>Za pravu pauzu</span>
+            </div>
+            <p class="menu-description">
+              Pauza od svakodnevnih obaveza uz obrok
+              i malo vremena za sebe.
+            </p>
+          </article>
+
+        </div>
+
+        <p class="menu-footnote">
+          Fotografije su ilustrativne. Za aktuelnu ponudu i cene,
+          kontaktirajte restoran.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about-section" id="about">
+      <div class="container about-grid">
+
+        <div class="about-visual">
+          <div class="about-photo">
+            <!-- Replace with a real interior photo -->
+            <img
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=85"
+              alt="Unutrašnjost restorana sa stolovima i stolicama"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="about-detail">
+            <span>Naš koncept</span>
+            <strong>Jednostavno.<br />Ukusno. Vaše.</strong>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <div class="eyebrow">O nama</div>
+          <h2 class="section-heading">
+            Mesto gde se<br />vraćaš zbog ukusa.
+          </h2>
+
+          <p class="section-copy">
+            Verujemo da dobar restoran nije samo ono što je
+            na tanjiru. Važni su i ljudi za stolom, prijatan
+            ambijent i osećaj da uvek imaš gde da svratiš.
+          </p>
+
+          <p class="section-copy">
+            Zato smo tu za svakodnevni ručak, spontana
+            okupljanja i one male pauze koje ulepšaju dan.
+          </p>
+
+          <a class="button button-outline" href="#contact">
+            Posetite nas <span class="arrow">↗</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- REVIEWS -->
+    <section class="reviews-section" id="reviews">
+      <div class="container">
+
+        <div class="reviews-header">
+          <div>
+            <div class="eyebrow">Reči naših gostiju</div>
+            <h2 class="section-heading">Lepo je čuti<br />da vam se dopada.</h2>
+          </div>
+
+          <div class="rating-summary">
+            <div class="rating-number">4,5</div>
+            <div>
+              <div class="rating-stars" aria-label="Ocena 4,5 od 5">
+                ★★★★★
+              </div>
+              <div class="rating-caption">Google ocena · 612 recenzija*</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-grid">
+
+          <article class="review-card">
+            <div class="rating-stars" aria-label="Pet zvezdica">
+              ★★★★★
+            </div>
+
+            <blockquote class="review-quote">
+              “The lunch was good and abundant, and the
+              service as well. No complaints!”
+            </blockquote>
+
+            <div class="reviewer">
+              <strong>Review Forever</strong>
+              <span>Google recenzija</span>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="rating-stars" aria-label="Pet zvezdica">
+              ★★★★★
+            </div>
+
+            <blockquote class="review-quote">
+              “Nice and casual place with decent food
+              and a few memorable flavors.”
+            </blockquote>
+
+            <div class="reviewer">
+              <strong>SladjanaBA</strong>
+              <span>Google recenzija</span>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="rating-stars" aria-label="Pet zvezdica">
+              ★★★★★
+            </div>
+
+            <blockquote class="review-quote">
+              “Solidne ćevape. Konobar veoma ljubazan.”
+            </blockquote>
+
+            <div class="reviewer">
+              <strong>Pustolov Hoarfrost</strong>
+              <span>Google recenzija</span>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="reviews-source">
+          *Ocena i broj recenzija prema dostavljenom Google rezultatu.
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Na%C5%A1+restoran+Concept+Bar+Veternik"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Pogledajte na Google Maps
+          </a>
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+      <div class="container contact-grid">
+
+        <div class="contact-content">
+          <div class="eyebrow">Svratite do nas</div>
+          <h2 class="section-heading">
+            Vaš sto<br />vas čeka.
+          </h2>
+
+          <p class="section-copy">
+            Bilo da ste u prolazu ili planirate ručak,
+            biće nam drago da vas ugostimo.
+            Pronađite nas u Veterniku.
+          </p>
+
+          <div class="contact-details">
+            <div>
+              <div class="contact-label">Adresa</div>
+              <div class="contact-value">
+                Novosadski put 106<br />
+                21203 Veternik, Srbija
+              </div>
+            </div>
+
+            <div>
+              <div class="contact-label">Lokacija</div>
+              <div class="contact-value">
+                Veternik<br />
+                Novi Sad
+              </div>
+            </div>
+
+            <div>
+              <div class="contact-label">Radno vreme</div>
+              <div class="contact-value">
+                Proverite aktuelno radno vreme<br />
+                pre dolaska.
+              </div>
+            </div>
+
+            <div>
+              <div class="contact-label">Rezervacije</div>
+              <div class="contact-value">
+                Kontakt informacije<br />
+                uskoro dostupne.
+              </div>
+            </div>
+          </div>
+
+          <a
+            class="button"
+            href="https://www.google.com/maps/search/?api=1&query=Novosadski+put+106%2C+Veternik"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Pronađi put <span class="arrow">↗</span>
+          </a>
+        </div>
+
+        <div class="map-panel" aria-label="Ilustracija mape lokacije restorana">
+          <div class="map-road"></div>
+
+          <div class="map-pin" aria-hidden="true">
+            <span>⌂</span>
+          </div>
+
+          <div class="map-label">
+            <div>
+              <strong>Naš restoran</strong>
+              <span>Novosadski put 106, Veternik</span>
+            </div>
+
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Novosadski+put+106%2C+Veternik"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Uputstva ↗
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+
+      <a class="footer-brand" href="#home">
+        <span class="brand-mark">N.</span>
+        <strong>Naš restoran · Concept Bar</strong>
+      </a>
+
+      <p>© 2026 Naš restoran. Sva prava zadržana.</p>
+
+      <nav class="footer-links" aria-label="Navigacija u podnožju">
+        <a href="#menu">Meni</a>
+        <a href="#about">O nama</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+
+    </div>
+  </footer>
+</body>
 </html>
