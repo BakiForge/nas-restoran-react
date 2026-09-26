@@ -1,11 +1,12 @@
+import { Header } from './components/Header';
 import './App.css'
 
 function App() {
    return (
     <>
-      <p>Nas Restoran & Concept Bar</p>
+      <Header />
     </>
-   )
+   );
 }
 
 export default App

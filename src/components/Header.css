@@ -1,0 +1,141 @@
+
+    .site-header {
+      position: relative;
+      z-index: 10;
+      border-bottom: 1px solid rgba(36, 35, 31, 0.08);
+      background: var(--cream);
+    }
+
+    .header-inner {
+      display: flex;
+      min-height: 83px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .brand {
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      gap: 11px;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 39px;
+      height: 39px;
+      place-items: center;
+      border: 1px solid var(--wine);
+      border-radius: 50%;
+      color: var(--wine);
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .brand-name {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .brand-name strong {
+      font-family: var(--serif);
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+    }
+
+    .brand-name span {
+      color: var(--muted);
+      font-size: 8px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    
+/* SHOPPING CART */
+
+    .cart-link {
+    position: relative;
+    display: grid;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    place-items: center;
+    color: var(--ink);
+    transition: color 180ms ease;
+    }
+
+    .cart-link:hover {
+    color: var(--wine);
+    }
+
+    .cart-icon {
+    width: 21px;
+    height: 21px;
+    }
+
+    .cart-count {
+    position: absolute;
+    top: 1px;
+    right: 0;
+    display: grid;
+    min-width: 17px;
+    height: 17px;
+    padding: 0 4px;
+    place-items: center;
+    border: 2px solid var(--cream);
+    border-radius: 50px;
+    background: var(--wine);
+    color: white;
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 1;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: clamp(19px, 3vw, 39px);
+    }
+
+    .main-nav a {
+      position: relative;
+      padding: 8px 0;
+      color: #55534e;
+      font-size: 12px;
+      font-weight: 500;
+      transition: color 180ms ease;
+    }
+
+    .main-nav a::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      background: var(--wine);
+      content: "";
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 180ms ease;
+    }
+
+    .main-nav a:hover {
+      color: var(--wine);
+    }
+
+    .main-nav a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .header-cta {
+      flex-shrink: 0;
+    }
+
+    .mobile-menu {
+      display: none;
+    }
