@@ -15,9 +15,9 @@ export function Header () {
             </a>
 
             <nav className="main-nav" aria-label="Glavna navigacija">
-                <a href="#home">Početna</a>
-                <a href="#menu">Meni</a>
-                <a href="#about">O nama</a>
+                <a href="/">Početna</a>
+                <a href="/menu">Meni</a>
+                <a href="/#about">O nama</a>
                 <a href="#reviews">Utisci</a>
                 <a href="#contact">Kontakt</a>
             </nav>
