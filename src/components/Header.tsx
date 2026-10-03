@@ -1,6 +1,11 @@
+import { useContext } from 'react';
+import { CartContext } from '../context/CartContext';
 import './Header.css';
 
 export function Header () {
+
+    const cartHolder = useContext(CartContext);
+
     return (
         <>
          <header className="site-header">
@@ -42,7 +47,7 @@ export function Header () {
                     <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
                 </svg>
 
-                <span className="cart-count">0</span>
+                <span className="cart-count">{cartHolder.cart.length}</span>
             </a>
 
             <a className="button header-cta" href="#contact">

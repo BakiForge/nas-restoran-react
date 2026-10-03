@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import { Header } from '../../components/Header';
 import { Footer } from '../../components/Footer';
 import { products } from '../../../data/products';
@@ -88,7 +89,7 @@ export function MenuPage () {
                 <div className="products-grid">
                     {products.map((product) => {
                      return (
-                       <>
+                       <Fragment key={product.id}>
                         <article className="product-card">
 
                                 <div className="product-image-wrapper">
@@ -160,7 +161,7 @@ export function MenuPage () {
 
                                 </div>
                        </article> 
-                       </>
+                       </Fragment>
                      );
                     })}
 
